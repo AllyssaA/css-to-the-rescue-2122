@@ -14,6 +14,18 @@ Uitdaging: context vormgeven, shapes maken
 
 Feedbackgesprek
 
+Beginnen met schetsen maken met wat ik wil
+
+Breakdownschets maken
+
+To look up:
+CSS remedy
+
+single div
+Lynn Fischer
+
+:root custom
+
 ## Week 2
 
 ## Week 3
