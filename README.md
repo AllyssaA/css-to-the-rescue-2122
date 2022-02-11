@@ -5,9 +5,9 @@ Gekozen opdracht: CSS Zen Garden, magazine artikel
 
 Context: prefers-color-scheme (voor nu eentje)
 
-~~Restrictie 1: SVG toepassen in shapes, masks én filters
+~~Restrictie 1: SVG toepassen in shapes, masks én filters~~
 
-~~Restrictie 2: Voldoen aan Level AAA van de WCAG.
+~~Restrictie 2: Voldoen aan Level AAA van de WCAG.~~
 
 Uitdaging: context vormgeven, shapes maken
 
