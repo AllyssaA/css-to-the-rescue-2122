@@ -12,7 +12,7 @@ Restrictie 2: Voldoen aan Level AAA van de WCAG.
 Uitdaging: context vormgeven, shapes maken
 
 
-Feedbackgesprek
+###Feedbackgesprek
 
 Beginnen met schetsen maken met wat ik wil
 
@@ -20,11 +20,12 @@ Breakdownschets maken
 
 To look up:
 CSS remedy
+:root custom
 
 single div
+
 Lynn Fischer
 
-:root custom
 
 ## Week 2
 
