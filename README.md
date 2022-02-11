@@ -9,6 +9,9 @@ Restrictie 1: SVG toepassen in shapes, masks én filters
 
 Restrictie 2:
 
+
+Feedbackgesprek
+
 ## Week 2
 
 ## Week 3
