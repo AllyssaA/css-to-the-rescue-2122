@@ -12,6 +12,7 @@ Context: prefers-color-scheme (voor nu eentje)
 Uitdaging: context vormgeven, shapes maken
 
 Poster style
+
 <img src="https://github.com/AllyssaA/css-to-the-rescue-2122/blob/main/docs/img/poster-style.JPG" alt="Gekozen style"/>
 
 ### Feedbackgesprek
