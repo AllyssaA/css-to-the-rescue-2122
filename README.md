@@ -9,6 +9,8 @@ Restrictie 1: SVG toepassen in shapes, masks én filters
 
 Restrictie 2:
 
+Uitdaging: context vormgeven, shapes maken
+
 
 Feedbackgesprek
 
