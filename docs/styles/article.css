@@ -1,0 +1,58 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
+body {
+  /* position: relative; */
+  margin: 0;
+}
+
+body {
+  --mainColor: #d5654f;
+  --textColor: #eee;
+  --middleColor: #9a8453;
+}
+
+h1 {
+  background-color: var(--mainColor);
+  width: 4em;
+  height: 20em;
+  color: var(--textColor);
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  text-align: center;
+  letter-spacing: 1em;
+}
+
+/* colors
+color: #d5654f; orangy
+color: #9a8453; gold-ish
+color: #413b3f; hair
+color: #dfdad4; woman face
+color: #d4d0c7; man face
+*/
+
+main div:nth-of-type(1) {
+  width: 5em;
+  height: 20em;
+  background-color: var(--middleColor);
+}
+
+main div:nth-of-type(2) {
+  width: 10em;
+  height: 10em;
+  background-color: var(--middleColor);
+  border-radius: 50%;
+  background-image: repeating-linear-gradient(
+    36deg,
+    #4b4129,
+    #4b4129 0.0625em,
+    transparent 0em,
+    transparent 0.125em
+  );
+  background-size: 0.75em;
+}
