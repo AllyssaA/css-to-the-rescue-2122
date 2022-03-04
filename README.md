@@ -57,7 +57,7 @@ Het is alweer week 3 en ik ben erachter gekomen dat ik hier en daar wat aan het 
 Deze week hadden we twee gastcolleges, een van deze is mij nog goed bij gebleven en dat was de gastspreker Nils Binder. Hij heeft tijdens de college inspirerende dingen laten zien met wat je allemaal kan doen met de styling en positioneren van text. 
 
 
-Deze week heb ik een cirkel met een boder gemaakt en geanimeerd. Ik heb een beetje gespeeld om noise/textuur aan te brengen op de cirkel. 
+Deze week heb ik een cirkel met een border gemaakt en geanimeerd. Ik heb een beetje gespeeld om noise/textuur aan te brengen op de cirkel. 
 Ik probeer nu de border van de cirkel textuur te geven, wat nog niet is gelukt. Het lukt wel op de binnenkant van de cirkel.
 
 
