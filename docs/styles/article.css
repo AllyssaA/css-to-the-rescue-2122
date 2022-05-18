@@ -5,6 +5,11 @@
   margin: 0;
 }
 
+:root {
+  --darkTheme-background: #222222;
+
+}
+
 html,
 body {
   /* position: relative; */
@@ -15,18 +20,25 @@ body {
   --mainColor: #d5654f;
   --textColor: #eee;
   --middleColor: #9a8453;
+  --wheel: #a8a49b;
 }
 
-h1 {
-  background-color: var(--mainColor);
-  width: 4em;
-  height: 20em;
-  color: var(--textColor);
-  writing-mode: vertical-lr;
-  transform: rotate(180deg);
-  text-align: center;
-  letter-spacing: 1em;
-}
+/* body::before {
+  content: "";
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 5em;
+  height: 5em;
+  left: 50%;
+  background-image: linear-gradient(
+    23deg,
+    rgba(255, 255, 255, 0.25),
+    rgba(255, 255, 255, 0.25) 1px,
+    transparent 0px,
+    transparent 2px
+  );
+} */
 
 /* colors
 color: #d5654f; orangy
@@ -36,23 +48,223 @@ color: #dfdad4; woman face
 color: #d4d0c7; man face
 */
 
-main div:nth-of-type(1) {
-  width: 5em;
-  height: 20em;
-  background-color: var(--middleColor);
+main {
+  display: flex;
+  flex-flow: column;
 }
 
-main div:nth-of-type(2) {
-  width: 10em;
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 3.75em;
+  height: 2.125em;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.625em;
+  width: 1.625em;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: var(--wheel);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--wheel);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+
+
+
+
+video {
+  max-width: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+h2 {
+  background-color: var(--mainColor);
+  width: 1em;
+  height: 21em;
+  color: var(--textColor);
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  text-align: center;
+  letter-spacing: 1em;
+  padding: 0em 2em 0em 1em;
+}
+
+/* rechthoek */
+main::before {
+  content: "";
+  width: 2em;
   height: 10em;
   background-color: var(--middleColor);
-  border-radius: 50%;
   background-image: repeating-linear-gradient(
-    36deg,
-    #4b4129,
-    #4b4129 0.0625em,
-    transparent 0em,
-    transparent 0.125em
+    23deg,
+    rgba(255, 255, 255, 0.25),
+    rgba(255, 255, 255, 0.25) 1px,
+    transparent 0px,
+    transparent 2px
   );
-  background-size: 0.75em;
+  left: 50%;
+  top: 25%;
+  position: absolute;
+}
+
+h1 {
+  background-color: var(--mainColor);
+  width: 1em;
+  height: 21em;
+  color: var(--textColor);
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  text-align: center;
+  letter-spacing: 1em;
+  padding: 0em 2em 0em 1em;
+}
+
+p:nth-of-type(1)::before {
+  content: "";
+  display: block;
+  shape-outside: ellipse(100% 40% at 0% 50%);
+  width: 5rem;
+  height: 10rem;
+  float: left;
+  opacity: 0.2;
+  background-color: #420;
+}
+
+
+/* https://www.kirupa.com/css/circles_radial_gradient.htm */
+/* https://redstapler.co/css-film-grain-effect/ */
+p:nth-of-type(1)::after {
+  content: "";
+  /* animation: roll 0.2s linear infinite; */
+  /* background-color: #aba79e; */
+  /* border: solid 5vmin var(--middleColor); */
+  height: 8em;
+
+  left: 50%;
+  margin-left: -15vmin;
+  margin-top: -15vmin;
+  position: absolute;
+  top: 50%;
+  transform-origin: 51% 51%;
+  width: 8em;
+  background-image: radial-gradient(
+      farthest-side circle at 50% 50%,
+      var(--wheel) 50%,
+      transparent 50.2%
+    ),
+    repeating-linear-gradient( 
+      23deg,
+      rgba(146, 105, 105, 0.25) 0px 1px,
+      transparent 1px 2px
+    )
+    /* ,
+    radial-gradient(
+      closest-side,
+      var(--middleColor) 50%,
+      transparent 50.2%
+    ) */
+    ;
+
+    background-color: var(--middleColor);
+
+    border-radius: 50%;
+}
+
+/* https://codepen.io/chris22smith/pen/rNeMvjy */
+/* main div:nth-of-type(2) { */
+/* animation: roll 0.2s linear infinite;
+  background-color: #aba79e;
+  border: solid 5vmin var(--middleColor);
+  border-radius: 50%;
+  height: 20vmin;
+  left: 50%;
+  margin-left: -15vmin;
+  margin-top: -15vmin;
+  position: absolute;
+  top: 50%;
+  transform-origin: 51% 51%;
+  width: 20vmin; */
+
+/* } */
+
+
+@keyframes roll {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* main div:nth-of-type(3){
+  --faceSize: 5em;
+  background-image: linear-gradient(
+    30deg,
+    black 1em,
+    transparent 0.1em
+  );
+} */
+
+p {
+  margin: 1em;
+}
+
+
+@media (prefers-color-scheme: dark){
+  body{
+    background-color: grey;
+  }
+}
+
+@media (prefers-color-scheme: light){
+  body{
+    background-color: beige;
+  }
+}
+
+#knopje:checked ~ main h1 {
+  opacity:.2;
 }
