@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Exo');
+
 *,
 *::before,
 *::after {
@@ -7,12 +9,11 @@
 
 :root {
   --darkTheme-background: #222222;
-
 }
 
 html,
 body {
-  /* position: relative; */
+  font-family: 'Exo';
   margin: 0;
 }
 
@@ -21,38 +22,17 @@ body {
   --textColor: #eee;
   --middleColor: #9a8453;
   --wheel: #a8a49b;
+  /* background noise soort van */
+  background-image: repeating-radial-gradient(circle at 17% 32%, #9a845321, #fefdf8 0.0009px);
+
 }
-
-/* body::before {
-  content: "";
-  position: relative;
-  display: flex;
-  justify-content: center;
-  width: 5em;
-  height: 5em;
-  left: 50%;
-  background-image: linear-gradient(
-    23deg,
-    rgba(255, 255, 255, 0.25),
-    rgba(255, 255, 255, 0.25) 1px,
-    transparent 0px,
-    transparent 2px
-  );
-} */
-
-/* colors
-color: #d5654f; orangy
-color: #9a8453; gold-ish
-color: #413b3f; hair
-color: #dfdad4; woman face
-color: #d4d0c7; man face
-*/
 
 main {
   display: flex;
   flex-flow: column;
 }
 
+/* dark/lightmode switch */
 .switch {
   position: relative;
   display: inline-block;
@@ -64,6 +44,22 @@ main {
   opacity: 0;
   width: 0;
   height: 0;
+}
+
+input#knopje, input#knopje2{
+  display: none;
+}
+
+#knopje:checked ~ main{
+  background-color: grey;
+  background-image: repeating-radial-gradient(circle at 17% 32%, #37332f, #595454 0.00088px);
+  color: var(--textColor);
+}
+
+#knopje:checked ~ body, #knopje:checked ~ footer{
+  background-color: grey;
+  background-image: repeating-radial-gradient(circle at 17% 32%, #37332f, #595454 0.00088px);
+  color: var(--textColor);
 }
 
 .slider {
@@ -88,15 +84,16 @@ main {
   transition: 0.4s;
 }
 
-input:checked + .slider {
-  background-color: var(--wheel);
+
+#knopje:checked ~ main label.switch[for=knopje] .slider {
+  background-color: var(--middleColor);
 }
 
-input:focus + .slider {
+.switch[for=knopje]:focus ~ .slider {
   box-shadow: 0 0 1px var(--wheel);
 }
 
-input:checked + .slider:before {
+#knopje:checked ~ main label.switch[for=knopje] .slider:before {
   transform: translateX(26px);
 }
 
@@ -109,20 +106,19 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-
-
-
+/* einde dark/light mode switch */
 
 
 video {
   max-width: 100%;
+  padding: 1em;
 }
 
 img {
   max-width: 100%;
 }
 
-h2 {
+h1{
   background-color: var(--mainColor);
   width: 1em;
   height: 21em;
@@ -134,137 +130,213 @@ h2 {
   padding: 0em 2em 0em 1em;
 }
 
-/* rechthoek */
-main::before {
+/* spinning wheel */
+h2#allowingweirdideas, aside h3,main > p:nth-of-type(1):after{
   content: "";
-  width: 2em;
-  height: 10em;
-  background-color: var(--middleColor);
-  background-image: repeating-linear-gradient(
-    23deg,
-    rgba(255, 255, 255, 0.25),
-    rgba(255, 255, 255, 0.25) 1px,
-    transparent 0px,
-    transparent 2px
+  width: 150px;
+  height: 150px;
+  right: 0;
+  border: 10px solid var(--middleColor);
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--middleColor),
+    var(--middleColor) 5deg,
+    transparent 5deg,
+    transparent 60deg,
+    var(--middleColor) 60deg,
+    var(--middleColor) 65deg,
+    transparent 65deg,
+    transparent 120deg,
+    var(--middleColor) 120deg,
+    var(--middleColor) 125deg,
+    transparent 125deg,
+    transparent 180deg,
+    var(--middleColor) 180deg,
+    var(--middleColor) 185deg,
+    transparent 185deg,
+    transparent 240deg,
+    var(--middleColor) 240deg,
+    var(--middleColor) 245deg,
+    transparent 245deg,
+    transparent 300deg,
+    var(--middleColor) 300deg,
+    var(--middleColor) 305deg,
+    transparent 305deg
   );
-  left: 50%;
-  top: 25%;
+    animation: spinWheel 1s infinite linear;  
+}
+
+h2#allowingweirdideas:before{
+  content: '';
   position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: var(--wheel);
 }
 
-h1 {
-  background-color: var(--mainColor);
-  width: 1em;
-  height: 21em;
-  color: var(--textColor);
-  writing-mode: vertical-lr;
-  transform: rotate(180deg);
-  text-align: center;
-  letter-spacing: 1em;
-  padding: 0em 2em 0em 1em;
+h2#allowingweirdideas:after{
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 170px;
+  height: 170px;
+  border: 5px solid --wheel;
+  border-radius: 50%;
 }
 
-p:nth-of-type(1)::before {
+@keyframes spinWheel {
+  0% {
+    transform: none;
+  }
+  
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+main > p:before {
   content: "";
   display: block;
   shape-outside: ellipse(100% 40% at 0% 50%);
   width: 5rem;
   height: 10rem;
   float: left;
-  opacity: 0.2;
-  background-color: #420;
+  /* opacity: 0.2; */
+  /* background-color: #420; */
 }
 
+main > p:nth-of-type(1){
+  position: absolute;
+  width: 50%;
+  align-self: center;
+  padding: 1em;
+}
 
-/* https://www.kirupa.com/css/circles_radial_gradient.htm */
-/* https://redstapler.co/css-film-grain-effect/ */
-p:nth-of-type(1)::after {
+main > p:nth-of-type(1):after{
   content: "";
-  /* animation: roll 0.2s linear infinite; */
-  /* background-color: #aba79e; */
-  /* border: solid 5vmin var(--middleColor); */
-  height: 8em;
-
-  left: 50%;
-  margin-left: -15vmin;
-  margin-top: -15vmin;
-  position: absolute;
-  top: 50%;
-  transform-origin: 51% 51%;
-  width: 8em;
-  background-image: radial-gradient(
-      farthest-side circle at 50% 50%,
-      var(--wheel) 50%,
-      transparent 50.2%
-    ),
-    repeating-linear-gradient( 
-      23deg,
-      rgba(146, 105, 105, 0.25) 0px 1px,
-      transparent 1px 2px
-    )
-    /* ,
-    radial-gradient(
-      closest-side,
-      var(--middleColor) 50%,
-      transparent 50.2%
-    ) */
-    ;
-
-    background-color: var(--middleColor);
-
-    border-radius: 50%;
+  display: block;
+  width: 10vw;
+  height: 10vw;
+  border-radius: 50%;
+  box-sizing: border-box;
+  z-index: 10;
 }
 
-/* https://codepen.io/chris22smith/pen/rNeMvjy */
-/* main div:nth-of-type(2) { */
-/* animation: roll 0.2s linear infinite;
-  background-color: #aba79e;
-  border: solid 5vmin var(--middleColor);
+main > p:nth-of-type(2):before {
+  content: "";
+  display: block;
+  background: url(https://cdn.shopify.com/s/files/1/0266/0443/7592/products/0015639_opel-insignia_1024x1024.png?v=1574585703) 50% 50% / auto 10.4vw; 
+  width: 10vw;
+  height: 10vw;
   border-radius: 50%;
-  height: 20vmin;
-  left: 50%;
-  margin-left: -15vmin;
-  margin-top: -15vmin;
-  position: absolute;
-  top: 50%;
-  transform-origin: 51% 51%;
-  width: 20vmin; */
+  animation: spin 2s linear infinite;
+  box-sizing: border-box;
+  z-index: 10;
+}
 
-/* } */
-
+em{
+  text-transform: capitalize;
+  font-weight: bold;
+}
 
 @keyframes roll {
-  100% {
-    transform: rotate(360deg);
+  0% { 
+    transform: translateX(0vw);
+  }  
+  
+  50% {
+    transform: translateX(90vw) scaleX(1);   
   }
+  
+  50.0001% {
+    transform: translateX(90vw) scaleX(-1);   }
+
+  100% {
+    transform: translateX(0vw) scaleX(-1);     }
 }
 
-/* main div:nth-of-type(3){
-  --faceSize: 5em;
-  background-image: linear-gradient(
-    30deg,
-    black 1em,
-    transparent 0.1em
-  );
-} */
+
+
+
+main > p:nth-of-type(2) {
+  /* position: absolute; */
+  width: 50%;
+  align-self: center;
+}
 
 p {
   margin: 1em;
 }
 
 
+
+figure {
+  padding: 1em;
+}
+
+figure figcaption{
+  color: var(--middleColor);
+  /* font-size: 50px; */
+  font-weight: bold;
+  background-image: repeating-radial-gradient(circle at 17% 32%, black, #fefdf8 0.0009px);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: 100% 100%;
+  animation: animate 8s ease-in-out infinite;
+}
+
+@keyframes animate {
+  0% {
+    background-size: 100% 100%;
+  }
+  50% {
+    background-size: 100% 80%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
+
+aside:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 5vw;
+  right: 5vw;
+  border-top: 1px solid rgba(0,0,0,.1);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }  
+}
+
+aside h3{
+  padding: 1em 0 0 1em;
+}
+
 @media (prefers-color-scheme: dark){
   body{
     background-color: grey;
+    color: var(--textColor);
+    background-image: repeating-radial-gradient(circle at 17% 32%, #fefdf8, #9a845321 0.00088px);
   }
 }
 
 @media (prefers-color-scheme: light){
   body{
-    background-color: beige;
+    background-color: #fefdf8;
   }
 }
 
-#knopje:checked ~ main h1 {
-  opacity:.2;
-}

@@ -63,4 +63,17 @@ Ik probeer nu de border van de cirkel textuur te geven, wat nog niet is gelukt. 
 
 https://codepen.io/AllyssaA/pen/QWOzpLZ
 
-## Week 4
+## Week 4 / Herkansing 
+
+Voor de herkansing ben ik bezig geweest om een light/dark mode te creeren, dit is aardig gelukt. Het was wel even zoeken hoe het ook alweer zat met before en afters en het linken van de input met label. De light/dark mode aan de hand van of je browser of je die optie had aan staan, dat had ik al werkend kunnen krijgen bij de eerste kans. 
+
+Ik heb een beetje zitten spelen met de cirkel die ik eigenlijk al had maar heb daarvoor nu conic-gradient gebruikt. Ik probeerde in de teks waar `<em>` was gebruikt, dat stukje bold en te veranderen naar hoofdletters maar het pakt alleen de eerste letter.
+
+
+
+# Bronnen
+- [Conic gradient](https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/conic-gradient)
+- [Radial gradient](https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/radial-gradient)
+- [Voorbeelden van CMDA-Minor CTTR](https://github.com/cmda-minor-web/css-to-the-rescue-2122)
+
+
