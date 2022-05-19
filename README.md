@@ -70,6 +70,11 @@ Voor de herkansing ben ik bezig geweest om een light/dark mode te creeren, dit i
 Ik heb een beetje zitten spelen met de cirkel die ik eigenlijk al had maar heb daarvoor nu conic-gradient gebruikt. Ik probeerde in de teks waar `<em>` was gebruikt, dat stukje bold en te veranderen naar hoofdletters maar het pakt alleen de eerste letter.
 
 
+### Waar ik trots op ben
+Het gebruik maken van conic gradient, dit had ik niet eerder gebruikt. In een radial gradient gaan de kleuren over van het midden van een ellips, naar buiten, in alle richtingen. Een conic gradient verloop wordt gespecificeerd door een rotattion angle, het midden van het verloop aan te geven en vervolgens een lijst met kleurstops op te geven.
+prefer-color-scheme was best wel simpel om te gebruiken, waar ik een beetje moeite mee had was het gebruik van before en afters. Om specifiek te zijn om de switch die de light en darkmode aan en uitzet. 
+
+
 
 # Bronnen
 - [Conic gradient](https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/conic-gradient)
