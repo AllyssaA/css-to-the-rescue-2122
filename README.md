@@ -72,7 +72,15 @@ Ik heb een beetje zitten spelen met de cirkel die ik eigenlijk al had maar heb d
 
 ### Waar ik trots op ben
 Het gebruik maken van conic gradient, dit had ik niet eerder gebruikt. In een radial gradient gaan de kleuren over van het midden van een ellips, naar buiten, in alle richtingen. Een conic gradient verloop wordt gespecificeerd door een rotattion angle, het midden van het verloop aan te geven en vervolgens een lijst met kleurstops op te geven.
-prefer-color-scheme was best wel simpel om te gebruiken, waar ik een beetje moeite mee had was het gebruik van before en afters. Om specifiek te zijn om de switch die de light en darkmode aan en uitzet. 
+
+
+### Wat ik lastig vond
+prefer-color-scheme was best wel simpel om te gebruiken, waar ik een beetje moeite mee had was het gebruik van before en afters. Om specifiek te zijn om de switch die de light en darkmode aan en uitzet. Het artikel vond ik ook best wel lang om voor elk stukje iets te verzinnen. Ik wilde eerst een soort deck van cards maken van elk stukje tekst in de aside maar dat is mij helaas niet gelukt om de h3 en de p's samen te groeperen.
+
+- responsive
+- groeperen h3 en p
+- switch dark/light mode
+- gebruik before/after
 
 
 
